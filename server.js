@@ -7,6 +7,8 @@ const app = express();
 
 //import routesc
 //const postRoutes = require('./routes/posts');
+const customerRoutes = require('./routes/Customer.routes');
+const requestRoutes = require('./routes/Request.routes');
 
 
 //app middleware
@@ -16,6 +18,8 @@ app.use(cors());
 
 //route middleware
 // app.use(postRoutes);
+app.use(customerRoutes);
+app.use(requestRoutes);
 
 
 const PORT = 8000;
