@@ -12,7 +12,8 @@ const customerRoutes = require('./routes/Customer.routes');
 const requestRoutes = require('./routes/Request.routes');
 const basicSalaryRoutes = require('./routes/basicSalary');
 const income_expenditureRoutes = require('./routes/income_expenditure');
-
+//services-sudaraka
+const serviceRoutes = require('./routes/services');
 
 
 //app middleware
@@ -27,6 +28,7 @@ app.use(customerRoutes);
 app.use(requestRoutes);
 app.use(basicSalaryRoutes);
 app.use(income_expenditureRoutes);
+app.use(serviceRoutes);
 
 
 
