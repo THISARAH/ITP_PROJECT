@@ -1,8 +1,17 @@
+
 import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
 import HomeA from './components/HomeA';
 import NavBar from './components/NavBar';
 
+//reservation
+import CreateRes from './components/CreateRes';
+import EditRes from './components/EditRes';
+import ResDetails from './components/ResDetails';
+import ViewRes from './components/ViewRes';
+import HomeRes from './components/HomeRes';
+
+//customer
 import allCustomer from './components/allCustomer';
 import createCustomer from './components/createCustomer';
 import editCustomer from './components/editCustomer';
@@ -29,8 +38,16 @@ export default class App extends Component {
          <BrowserRouter>
            <div className="container">
            <NavBar/>
-           <Route path="/" exact component={HomeA}></Route>
+           <Route path="/" exact component={HomeA}></Route>   
 
+          {/* Reservation */}
+          <Route path="/addRes" exact component={CreateRes}></Route>
+          <Route path="/editRes/:id" exact component={EditRes}></Route>
+          <Route path="/Reserpost/:id" exact component={ResDetails}></Route>        
+          <Route path="/vposts" exact component={ViewRes}></Route>
+          <Route path="/hres" exact component={HomeRes}></Route>
+          
+           {/*Customer*/}
            <Route path= "/allCustomer" exact component={allCustomer}></Route>
            <Route path= "/register" component={createCustomer}></Route>
            <Route path= "/edit/:id" component={editCustomer}></Route>
@@ -48,6 +65,7 @@ export default class App extends Component {
            <Route path="/finance/incomeexpenditure" exact component={IncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/update/:id" exact component={EditIncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/create" exact component={CreateIncomeExpenditure}></Route>
+
 
            </div>
          </BrowserRouter>

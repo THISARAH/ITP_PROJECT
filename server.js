@@ -1,12 +1,12 @@
 const express = require('express'); 
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');   //this will convert json format to java script object
 const cors = require('cors');
 
 const app = express();
 
 //import routesc
-//const postRoutes = require('./routes/posts');
+const ResRoutes = require('./routes/postsRes');
 
 const customerRoutes = require('./routes/Customer.routes');
 const requestRoutes = require('./routes/Request.routes');
@@ -21,7 +21,7 @@ app.use(cors());
 
 
 //route middleware
-// app.use(postRoutes);
+app.use(ResRoutes);
 
 app.use(customerRoutes);
 app.use(requestRoutes);
