@@ -17,15 +17,24 @@ export default class NavBar extends Component {
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Reservations </a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/hres">Reservations </a>
+                        </li>
+                        &nbsp;
+                        <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" class="btn btn-outline-info" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Finance
+                        </a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a className="dropdown-item" href="/finance/basicsalary">Basic Salaries</a></li>
+                            <li><a className="dropdown-item" href="/finance/incomeexpenditure">Income and Expenditure</a></li>
+                            {/* <li><a className="dropdown-item" href="/profit">Profit</a></li> */}
+                            <li><hr className="dropdown-divider"/></li>
+                            <li><a className="dropdown-item" href="/finance/reports">Reports</a></li>
+                        </ul>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Financial</a>
-                        </li>
-                        &nbsp;
-                        <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Customers</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/allCustomer">Customers</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
