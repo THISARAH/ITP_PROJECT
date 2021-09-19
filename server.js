@@ -7,8 +7,12 @@ const app = express();
 
 //import routesc
 //const postRoutes = require('./routes/posts');
+
+const customerRoutes = require('./routes/Customer.routes');
+const requestRoutes = require('./routes/Request.routes');
 const basicSalaryRoutes = require('./routes/basicSalary');
 const income_expenditureRoutes = require('./routes/income_expenditure');
+
 
 
 //app middleware
@@ -18,8 +22,12 @@ app.use(cors());
 
 //route middleware
 // app.use(postRoutes);
+
+app.use(customerRoutes);
+app.use(requestRoutes);
 app.use(basicSalaryRoutes);
 app.use(income_expenditureRoutes);
+
 
 
 const PORT = 8000;
