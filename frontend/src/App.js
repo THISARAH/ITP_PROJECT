@@ -3,6 +3,10 @@ import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
 import HomeA from './components/HomeA';
 import NavBar from './components/NavBar';
+import CreateSupplier from './components/CreateSupplier';
+import EditSupplier from './components/EditSupplier';
+import SupplierHome from './components/SupplierHome';
+import SupplierDetails from './components/SupplierDetails';
 
 //reservation
 import CreateRes from './components/CreateRes';
@@ -38,7 +42,14 @@ export default class App extends Component {
          <BrowserRouter>
            <div className="container">
            <NavBar/>
-           <Route path="/" exact component={HomeA}></Route>   
+
+           <Route path="/" exact component={HomeA}></Route>
+        {/* Supplier */}
+        <Route path="/supplierH" exact component={SupplierHome}></Route>
+        <Route path="/addsup" exact component={CreateSupplier}></Route>
+        <Route path="/editsup/:id" exact component={EditSupplier}></Route>
+        <Route path="/supplier/:id" exact component={SupplierDetails}></Route>
+        
 
           {/* Reservation */}
           <Route path="/addRes" exact component={CreateRes}></Route>
@@ -65,6 +76,7 @@ export default class App extends Component {
            <Route path="/finance/incomeexpenditure" exact component={IncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/update/:id" exact component={EditIncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/create" exact component={CreateIncomeExpenditure}></Route>
+
 
 
            </div>
