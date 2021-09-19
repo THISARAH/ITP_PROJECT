@@ -7,6 +7,7 @@ const app = express();
 
 //import routesc
 //const postRoutes = require('./routes/posts');
+const supplierRoutes = require('./routes/suppliers');
 
 
 //app middleware
@@ -16,7 +17,7 @@ app.use(cors());
 
 //route middleware
 // app.use(postRoutes);
-
+app.use(supplierRoutes);
 
 const PORT = 8000;
 //const DB_URL = 'mongodb+srv://twg:twg123@cluster0.g6c3p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
