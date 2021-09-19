@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 //import routesc
-//const postRoutes = require('./routes/posts');
+const postRoutes = require('./routes/sampleRestaurant');
 
 
 //app middleware
@@ -15,7 +15,7 @@ app.use(cors());
 
 
 //route middleware
-// app.use(postRoutes);
+app.use(postRoutes);
 
 
 const PORT = 8000;
