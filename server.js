@@ -8,6 +8,8 @@ const app = express();
 //import routesc
 const ResRoutes = require('./routes/postsRes');
 
+const postRoutes = require('./routes/posts');
+
 const customerRoutes = require('./routes/Customer.routes');
 const requestRoutes = require('./routes/Request.routes');
 const basicSalaryRoutes = require('./routes/basicSalary');
@@ -27,6 +29,8 @@ app.use(customerRoutes);
 app.use(requestRoutes);
 app.use(basicSalaryRoutes);
 app.use(income_expenditureRoutes);
+app.use(postRoutes);//route middleware
+
 
 
 
