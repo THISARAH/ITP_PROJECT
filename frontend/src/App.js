@@ -1,3 +1,5 @@
+ 
+ 
 
 import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
@@ -9,6 +11,15 @@ import CreateSupplier from './components/CreateSupplier';
 import EditSupplier from './components/EditSupplier';
 import SupplierHome from './components/SupplierHome';
 import SupplierDetails from './components/SupplierDetails';
+
+
+//employee
+import CreateEmployee from './components/CreateEmployee';
+ import EditEmployee from './components/EditEmployee';
+ import EmployeeDetails from './components/EmployeeDetails';
+ import EmpHome from './components/EmpHome';
+ import EmployeeReports from './components/EmployeeReports';
+
 
 //reservation
 import CreateRes from './components/CreateRes';
@@ -56,14 +67,16 @@ import ServiceDetails from './components/ServiceDetails';
 import AllServices from './components/AllServices';
 
 
+ 
 
-export default class App extends Component {
+ export default class App extends Component{
   render() {
     return (
-      <div>
+      
+     
          <BrowserRouter>
            <div className="container">
-
+ 
            {/* <NavBar/> */}
 
            <Route path="/" exact component={HomeA}></Route>
@@ -91,6 +104,14 @@ export default class App extends Component {
            <Route path= "/login" component={login}></Route>
            <Route path= "/createRequest" component={createRequest}></Route>
            <Route path= "/readRequest" component={readRequest}></Route>
+        
+      
+               {/*Employee*/}               
+            <Route path="/Emp" exact component={EmpHome}></Route>
+           <Route path="/addEmp" component={CreateEmployee}></Route>
+           <Route path="/editEmp/:id" component={EditEmployee}></Route>
+           <Route path="/employee/:id" component={EmployeeDetails}></Route>
+           <Route path="/reportsEmp" component={EmployeeReports}></Route>
            
            {/* Finance */}
            <Route path="/finance/basicsalary" exact component={BasicSalary}></Route>
@@ -125,11 +146,11 @@ export default class App extends Component {
 
 
 
+ 
 
            </div>
          </BrowserRouter>
-        
-      </div>
+    
     )
   }
 }

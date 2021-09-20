@@ -13,10 +13,11 @@ export default class NavBar extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-primary" aria-current="page" href="/">Home</a>
+                        <a className="nav-link active" className="btn btn-primary" aria-current="page" href="#">Home</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
+ 
                         <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/hres">Reservations </a>
                         </li>
                         &nbsp;
@@ -39,13 +40,15 @@ export default class NavBar extends Component {
                         &nbsp;
                         <li className="nav-item">
                         <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/HomeRestaurant">Restaurant</a>
+ 
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Employees</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="/Emp">Employees</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
+ 
                         <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/supplierH">Suppliers</a>
                         </li>
                         &nbsp;
@@ -55,6 +58,7 @@ export default class NavBar extends Component {
                         &nbsp;
                         <li className="nav-item">
                         <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/Home">Feedbacks</a>
+ 
                         </li>
                         &nbsp;
                         

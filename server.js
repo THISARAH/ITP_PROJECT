@@ -8,6 +8,7 @@ const app = express();
 //import routesc
 
 //const postRoutes = require('./routes/posts');
+const employeeRoutes = require('./routes/employee');
 
 const RestaurantRoutes = require('./routes/sampleRestaurant');
 
@@ -34,6 +35,9 @@ app.use(cors());
 //route middleware
 
 // app.use(postRoutes);
+ 
+app.use(employeeRoutes);
+ 
 app.use(supplierRoutes);
 
 app.use(ResRoutes);
@@ -51,6 +55,7 @@ app.use(serviceRoutes);
 
 
 
+ 
 
 
 const PORT = 8000;
