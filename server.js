@@ -9,6 +9,7 @@ const app = express();
 
 //const postRoutes = require('./routes/posts');
 
+const RestaurantRoutes = require('./routes/sampleRestaurant');
 
 const ResRoutes = require('./routes/postsRes');
 
@@ -39,7 +40,11 @@ app.use(customerRoutes);
 app.use(requestRoutes);
 app.use(basicSalaryRoutes);
 app.use(income_expenditureRoutes);
+
+app.use(RestaurantRoutes);
+
 app.use(serviceRoutes);
+
 
 
 

@@ -38,7 +38,7 @@ export default class NavBar extends Component {
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Restaurant</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/HomeRestaurant">Restaurant</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
