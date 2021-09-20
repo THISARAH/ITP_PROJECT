@@ -1,8 +1,21 @@
+
 import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
 import HomeA from './components/HomeA';
 import NavBar from './components/NavBar';
+import CreateSupplier from './components/CreateSupplier';
+import EditSupplier from './components/EditSupplier';
+import SupplierHome from './components/SupplierHome';
+import SupplierDetails from './components/SupplierDetails';
 
+//reservation
+import CreateRes from './components/CreateRes';
+import EditRes from './components/EditRes';
+import ResDetails from './components/ResDetails';
+import ViewRes from './components/ViewRes';
+import HomeRes from './components/HomeRes';
+
+//customer
 import allCustomer from './components/allCustomer';
 import createCustomer from './components/createCustomer';
 import editCustomer from './components/editCustomer';
@@ -35,8 +48,23 @@ export default class App extends Component {
          <BrowserRouter>
            <div className="container">
            <NavBar/>
-           <Route path="/" exact component={HomeA}></Route>
 
+           <Route path="/" exact component={HomeA}></Route>
+        {/* Supplier */}
+        <Route path="/supplierH" exact component={SupplierHome}></Route>
+        <Route path="/addsup" exact component={CreateSupplier}></Route>
+        <Route path="/editsup/:id" exact component={EditSupplier}></Route>
+        <Route path="/supplier/:id" exact component={SupplierDetails}></Route>
+        
+
+          {/* Reservation */}
+          <Route path="/addRes" exact component={CreateRes}></Route>
+          <Route path="/editRes/:id" exact component={EditRes}></Route>
+          <Route path="/Reserpost/:id" exact component={ResDetails}></Route>        
+          <Route path="/vposts" exact component={ViewRes}></Route>
+          <Route path="/hres" exact component={HomeRes}></Route>
+          
+           {/*Customer*/}
            <Route path= "/allCustomer" exact component={allCustomer}></Route>
            <Route path= "/register" component={createCustomer}></Route>
            <Route path= "/edit/:id" component={editCustomer}></Route>
@@ -60,6 +88,7 @@ export default class App extends Component {
            <Route path="/addr" component={CreateService}></Route>
            <Route path="/editr/:id" component={EditService}></Route>
            <Route path="/service/:id" component={ServiceDetails}></Route>
+
 
            </div>
          </BrowserRouter>

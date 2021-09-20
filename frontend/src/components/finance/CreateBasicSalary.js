@@ -54,7 +54,6 @@ export default class CreateBasicSalary extends Component {
         }
 
         if(designationError || levelError || amountError){
-            // this.state = {designationError: designationError, levelError: levelError, amountError: amountError};
             this.setState(
                 {
                     designationError: designationError,
