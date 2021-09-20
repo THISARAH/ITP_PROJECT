@@ -41,6 +41,7 @@ export default class CreateService extends Component {
 
     axios.post("http://localhost:8000/service/save" , data).then((res)=>{
       if(res.data.success){
+        alert("Package Reservation successfully!!!");
         this.setState(
           {
             type:"",

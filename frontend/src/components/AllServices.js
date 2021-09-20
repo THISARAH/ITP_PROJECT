@@ -122,7 +122,7 @@ componentDidMount(){
                   </a>
                  &nbsp;
                   &nbsp;
-                  <a className="btn btn-outline-danger" href={`/`} onClick={()=>this.onDelete(services._id)}>
+                  <a className="btn btn-outline-danger" href={`/AllServices`} onClick={()=>this.onDelete(services._id)}>
                     <i className="far fa-trash-alt"></i>&nbsp;Delete
                   </a>
                 </td>
