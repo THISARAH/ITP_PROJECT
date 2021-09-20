@@ -17,6 +17,9 @@ const customerRoutes = require('./routes/Customer.routes');
 const requestRoutes = require('./routes/Request.routes');
 const basicSalaryRoutes = require('./routes/basicSalary');
 const income_expenditureRoutes = require('./routes/income_expenditure');
+
+//services-sudaraka
+const serviceRoutes = require('./routes/services');
 const supplierRoutes = require('./routes/suppliers');
 
 
@@ -37,7 +40,12 @@ app.use(customerRoutes);
 app.use(requestRoutes);
 app.use(basicSalaryRoutes);
 app.use(income_expenditureRoutes);
+
 app.use(RestaurantRoutes);
+
+app.use(serviceRoutes);
+
+
 
 
 

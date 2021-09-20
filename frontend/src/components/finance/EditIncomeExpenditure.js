@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from '../NavBar';
 
 /**
 * @author
@@ -144,6 +145,8 @@ export default class EditIncomeExpenditure extends Component {
     
     render() {
     return(
+        <div className = "container" >
+        <NavBar/>
         <div className="col-md-8 mt-4 mx-auto"> 
             <br/>
             <h3 className="h3 mb-3 font-weight-normal">Update Record</h3> 
@@ -231,6 +234,7 @@ export default class EditIncomeExpenditure extends Component {
                     
 
                 </form>
+        </div>
         </div>
     )
     }

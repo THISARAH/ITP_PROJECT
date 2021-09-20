@@ -17,47 +17,30 @@ export default class NavBar extends Component {
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/hres">Reservations </a>
-                        </li>
-                        &nbsp;
-                        <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" class="btn btn-outline-info" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Finance
-                        </a>
-                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a className="dropdown-item" href="/finance/basicsalary">Basic Salaries</a></li>
-                            <li><a className="dropdown-item" href="/finance/incomeexpenditure">Income and Expenditure</a></li>
-                            {/* <li><a className="dropdown-item" href="/profit">Profit</a></li> */}
-                            <li><hr className="dropdown-divider"/></li>
-                            <li><a className="dropdown-item" href="/finance/reports">Reports</a></li>
-                        </ul>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Rooms </a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/allCustomer">Customers</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Restaurant</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/HomeRestaurant">Restaurant</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Restaurant</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Employees</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Services</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/supplierH">Suppliers</a>
-                        </li>
-                        &nbsp;
-                        <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/AllServices">Extra-Facilities</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">About us</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
                         <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Feedbacks</a>
                         </li>
                         &nbsp;
-                        
+{/*                         
                         <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
@@ -68,7 +51,7 @@ export default class NavBar extends Component {
                             <li><hr className="dropdown-divider"/></li>
                             <li><a className="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                        </li>
+                        </li> */}
                     </ul>
                     
                     </div>
