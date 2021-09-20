@@ -34,6 +34,12 @@ import IncomeExpenditure from './components/finance/IncomeExpenditure';
 import EditIncomeExpenditure from './components/finance/EditIncomeExpenditure';
 import CreateIncomeExpenditure from './components/finance/CreateIncomeExpenditure';
 
+//services - sudaraka
+import CreateService from './components/CreateService';
+import EditService from './components/EditService';
+import ServiceDetails from './components/ServiceDetails';
+import AllServices from './components/AllServices';
+
 
 export default class App extends Component {
   render() {
@@ -77,6 +83,11 @@ export default class App extends Component {
            <Route path="/finance/incomeexpenditure/update/:id" exact component={EditIncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/create" exact component={CreateIncomeExpenditure}></Route>
 
+           {/* Services */}
+           <Route path="/AllServices" exact component={AllServices}></Route>
+           <Route path="/addr" component={CreateService}></Route>
+           <Route path="/editr/:id" component={EditService}></Route>
+           <Route path="/service/:id" component={ServiceDetails}></Route>
 
 
            </div>
