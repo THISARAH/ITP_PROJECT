@@ -36,6 +36,12 @@ import IncomeExpenditure from './components/finance/IncomeExpenditure';
 import EditIncomeExpenditure from './components/finance/EditIncomeExpenditure';
 import CreateIncomeExpenditure from './components/finance/CreateIncomeExpenditure';
 
+//feedback
+import CreatePost from './components/CreatePost'
+import EditPost from './components/EditPost'
+import Home from './components/Home'
+import PostDetails from './components/PostDetails'
+
 
 //Restaurant 
 import HomeRestaurant from './components/HomeRestaurant';
@@ -93,6 +99,12 @@ export default class App extends Component {
            <Route path="/finance/incomeexpenditure" exact component={IncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/update/:id" exact component={EditIncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/create" exact component={CreateIncomeExpenditure}></Route>
+
+           {/*feedback*/}
+           <Route path="/Home" exact component={Home}/>
+          <Route path="/addf" component={CreatePost}/>
+          <Route path="/editf/:id" component={EditPost}/>
+          <Route path="/post/:id" component={PostDetails}/>
 
 
 {/*Restaurant*/}
