@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
 import HomeA from './components/HomeA';
-import NavBar from './components/NavBar';
+import HomeC from './components/HomeC';
+// import NavBar from './components/NavBar';
 // finance
 import BasicSalary from './components/finance/BasicSalary';
 import EditBasicSalary from './components/finance/EditBasicSalary';
@@ -16,7 +17,7 @@ export default class App extends Component {
       <div>
          <BrowserRouter>
            <div className="container">
-           <NavBar/>
+           {/* <NavBar/> */}
            <Route path="/" exact component={HomeA}></Route>
            {/* Finance */}
            <Route path="/finance/basicsalary" exact component={BasicSalary}></Route>
@@ -25,6 +26,7 @@ export default class App extends Component {
            <Route path="/finance/incomeexpenditure" exact component={IncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/update/:id" exact component={EditIncomeExpenditure}></Route>
            <Route path="/finance/incomeexpenditure/create" exact component={CreateIncomeExpenditure}></Route>
+           <Route path="/Home" exact component={HomeC}></Route>
            </div>
          </BrowserRouter>
         
