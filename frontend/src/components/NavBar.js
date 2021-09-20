@@ -17,19 +17,30 @@ export default class NavBar extends Component {
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Reservations </a>
+ 
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/hres">Reservations </a>
+                        </li>
+                        &nbsp;
+                        <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" class="btn btn-outline-info" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Finance
+                        </a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a className="dropdown-item" href="/finance/basicsalary">Basic Salaries</a></li>
+                            <li><a className="dropdown-item" href="/finance/incomeexpenditure">Income and Expenditure</a></li>
+                            {/* <li><a className="dropdown-item" href="/profit">Profit</a></li> */}
+                            <li><hr className="dropdown-divider"/></li>
+                            <li><a className="dropdown-item" href="/finance/reports">Reports</a></li>
+                        </ul>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Financial</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/allCustomer">Customers</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Customers</a>
-                        </li>
-                        &nbsp;
-                        <li className="nav-item">
-                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Restaurant</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/HomeRestaurant">Restaurant</a>
+ 
                         </li>
                         &nbsp;
                         <li className="nav-item">
@@ -37,15 +48,17 @@ export default class NavBar extends Component {
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Suppliers</a>
+ 
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/supplierH">Suppliers</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Facilities</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/AllServices">Extra-Facilities</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Feedbacks</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="/Home">Feedbacks</a>
+ 
                         </li>
                         &nbsp;
                         
@@ -53,12 +66,7 @@ export default class NavBar extends Component {
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                         </a>
-                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a className="dropdown-item" href="#">Action</a></li>
-                            <li><a className="dropdown-item" href="#">Another action</a></li>
-                            <li><hr className="dropdown-divider"/></li>
-                            <li><a className="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        
                         </li>
                     </ul>
                     
