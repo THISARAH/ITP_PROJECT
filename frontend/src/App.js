@@ -2,7 +2,13 @@
 import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
 import HomeA from './components/HomeA';
+import HomeC from './components/HomeC';
+// import NavBar from './components/NavBar';
 import NavBar from './components/NavBar';
+import CreateSupplier from './components/CreateSupplier';
+import EditSupplier from './components/EditSupplier';
+import SupplierHome from './components/SupplierHome';
+import SupplierDetails from './components/SupplierDetails';
 
 //reservation
 import CreateRes from './components/CreateRes';
@@ -37,14 +43,36 @@ import Home from './components/Home'
 import PostDetails from './components/PostDetails'
 
 
+//Restaurant 
+import HomeRestaurant from './components/HomeRestaurant';
+import RestCreatePost from './components/RestCreatePost';
+import RestEditPost from './components/RestEditPost';
+import RestPostDetails from './components/RestPostDetails';
+
+//services - sudaraka
+import CreateService from './components/CreateService';
+import EditService from './components/EditService';
+import ServiceDetails from './components/ServiceDetails';
+import AllServices from './components/AllServices';
+
+
+
 export default class App extends Component {
   render() {
     return (
       <div>
          <BrowserRouter>
            <div className="container">
-           <NavBar/>
-           <Route path="/" exact component={HomeA}></Route>   
+
+           {/* <NavBar/> */}
+
+           <Route path="/" exact component={HomeA}></Route>
+        {/* Supplier */}
+        <Route path="/supplierH" exact component={SupplierHome}></Route>
+        <Route path="/addsup" exact component={CreateSupplier}></Route>
+        <Route path="/editsup/:id" exact component={EditSupplier}></Route>
+        <Route path="/supplier/:id" exact component={SupplierDetails}></Route>
+        
 
           {/* Reservation */}
           <Route path="/addRes" exact component={CreateRes}></Route>
@@ -77,6 +105,25 @@ export default class App extends Component {
           <Route path="/addf" component={CreatePost}/>
           <Route path="/editf/:id" component={EditPost}/>
           <Route path="/post/:id" component={PostDetails}/>
+
+
+{/*Restaurant*/}
+<Route path="/HomeRestaurant" exact component={HomeRestaurant}></Route>
+        <Route path="/Restaurantadd" exact component={RestCreatePost}></Route>
+        <Route path="/Restaurantedit/:id" exact component={RestEditPost}></Route>
+        <Route path="/Restaurantpost/:id" exact component={RestPostDetails}></Route>
+
+            {/* Customer Home */}
+           <Route path="/Home" exact component={HomeC}></Route>
+
+
+           {/* Services */}
+           <Route path="/AllServices" exact component={AllServices}></Route>
+           <Route path="/addr" component={CreateService}></Route>
+           <Route path="/editr/:id" component={EditService}></Route>
+           <Route path="/service/:id" component={ServiceDetails}></Route>
+
+
 
 
            </div>

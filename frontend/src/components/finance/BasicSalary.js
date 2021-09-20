@@ -1,4 +1,5 @@
 import Image from "./img/finance2.jpg";
+import NavBar from '../NavBar';
 import React, { Component } from 'react';
 const axios = require('axios').default;
 
@@ -50,7 +51,9 @@ filterData(basicSalaryRecords, searchKey){
 
     const result = basicSalaryRecords.filter((BasicSalary) =>
         BasicSalary.designation.toLowerCase().includes(searchKey) ||
-        BasicSalary.level.toLowerCase().includes(searchKey)
+        BasicSalary.level.toLowerCase().includes(searchKey) ||
+        BasicSalary.designation.includes(searchKey) ||
+        BasicSalary.level.includes(searchKey)
     )
  
     this.setState({basicSalaryRecords: result});
@@ -70,9 +73,9 @@ handleSearchArea = (e) => {
 
  render() {
   return(
-
     // <div style={{ backgroundImage: 'url(' + Image + ')', resize:'cover', backgroundSize: 'cover' , margin: '15px'}}>
     <div className = "container" >
+        <NavBar/>
        <br/>
         <div className="row">
             <div className="col-lg-9 mt-2 mb-2">
