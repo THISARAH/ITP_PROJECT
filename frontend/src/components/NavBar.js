@@ -13,39 +13,39 @@ export default class NavBar extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-primary" aria-current="page" href="/">Home</a>
+                        <a className="nav-link active" className="btn btn-primary" aria-current="page" href="#">Home</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Reservations </a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Reservations </a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Financial</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Financial</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Customers</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Customers</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Restaurant</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Restaurant</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Employees</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="/Emp">Employees</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Suppliers</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Suppliers</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Extra-Facilities</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Facilities</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Feedbacks</a>
+                        <a className="nav-link active" className="btn btn-outline-info" aria-current="page" href="#">Feedbacks</a>
                         </li>
                         &nbsp;
                         
