@@ -17,11 +17,7 @@ export default class NavBar extends Component {
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Rooms </a>
-                        </li>
-                        &nbsp;
-                        <li className="nav-item">
-                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Restaurant</a>
+                        <a className="nav-link active" class="btn btn-outline-info" aria-current="page" href="#">Reservation</a>
                         </li>
                         &nbsp;
                         <li className="nav-item">
@@ -53,6 +49,17 @@ export default class NavBar extends Component {
                         </ul>
                         </li> */}
                     </ul>
+                    <div class="btn-group dropstart">
+                                <button type="button" class="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a className="dropdown-item" href="/customerDetails">Profile</a></li>
+                                    <li><hr className="dropdown-divider"/></li>
+                                    <li><a className="dropdown-item" href="/">Sign out</a></li>
+                                </ul>
+                    </div>
+                    
                     
                     </div>
                 </div>

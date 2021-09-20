@@ -1,5 +1,7 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
+import res1 from '../images/res1.png'
+import NavBar from './NavBar';
  
 export default class RestEditPost extends Component{
 
@@ -114,19 +116,21 @@ export default class RestEditPost extends Component{
           
       <html>
       <body>
-<section style={{backgroundImage:`url('https://pixabay.com/get/g28979704d3f3d931d422fb35071608ef3d25d360686a86fa5113201ccfb1ef4b5d1d9f4fb3b205c6161857eda25b49dc.jpg')`,
+      <div className = "container" >
+            <NavBar/> </div>
+<section style={{backgroundImage:`url('${res1}')`,
  backgroundPosition:'auto',
         
  backgroundSize:'cover' 
 }}> 
  <div className="col-md-8 mt-4 mx-auto"style={{
-backgroundImage:`url('https://pixabay.com/get/g28979704d3f3d931d422fb35071608ef3d25d360686a86fa5113201ccfb1ef4b5d1d9f4fb3b205c6161857eda25b49dc.jpg')`,
+backgroundImage:`url(${res1})`,
 backgroundPosition:'auto',
         
 backgroundSize:'cover' 
 }}>
 
- <h1 className="h3 mb-3 font-weight-normal">Enter details</h1>
+ <div className="h1"><h1 className="h3 mb-3 font-weight-normal">Enter details</h1> </div>
  
  <form className="row" onSubmit={this.onSubmit}>
 
@@ -262,21 +266,21 @@ backgroundSize:'cover'
  <br></br>
  <div className="form-group" style={{marginBottom: '15px'}}>
  <label style={{marginBottom: '5px'}}>Name on the card</label>
- <input type="text"
+ <input type="password"
  className="form-control" placeholder="Name"
  name="cardname"
  value={this.state.cardname} 
  pattern="[a-z A-Z .]+"
- onChange ={this.handleInputChange}required/>
+ onChange ={this.handleInputChange}readOnly/>
  </div>
 
  <div className="form-group" style={{marginBottom: '15px'}}>
  <label style={{marginBottom: '5px'}}>Card number</label>
- <input type="text"
+ <input type="password"
  className="form-control" placeholder="eg: 1234 5678 7896 7458"
  name="cno"
  value={this.state.cno} 
- onChange ={this.handleInputChange}required/>
+ onChange ={this.handleInputChange}readOnly/>
  </div>
 
  <div className="form-group" style={{marginBottom: '15px'}}>
@@ -285,17 +289,17 @@ backgroundSize:'cover'
  className="form-control" placeholder="expdate"
  name="expdate"
  value={this.state.expdate} 
- onChange ={this.handleInputChange}required/>
+ onChange ={this.handleInputChange}readOnly/>
  </div>
 
  <div className="form-group" style={{marginBottom: '15px'}}>
  <label style={{marginBottom: '5px'}}>CVV</label>
- <input type="text"
+ <input type="password"
  className="form-control" placeholder="3-digit number"
  name="cvv"
  pattern="[0-9]{3}"
  value={this.state.cvv} 
- onChange ={this.handleInputChange}required/>
+ onChange ={this.handleInputChange}readOnly/>
  </div>
  <button className="btn btn-success" id="btn1" type="submit" style={{marginTop: '40px'}} >
   <i className="far fa-check-square"></i>

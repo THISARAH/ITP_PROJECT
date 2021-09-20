@@ -50,7 +50,7 @@ import CreateIncomeExpenditure from './components/finance/CreateIncomeExpenditur
 //feedback
 import CreatePost from './components/CreatePost'
 import EditPost from './components/EditPost'
-import Home from './components/Home'
+import FeedbackHome from './components/Home'
 import PostDetails from './components/PostDetails'
 
 
@@ -79,7 +79,7 @@ import AllServices from './components/AllServices';
  
            {/* <NavBar/> */}
 
-           <Route path="/" exact component={HomeA}></Route>
+           <Route path="/AdminHome" exact component={HomeA}></Route>
         {/* Supplier */}
         <Route path="/supplierH" exact component={SupplierHome}></Route>
         <Route path="/addsup" exact component={CreateSupplier}></Route>
@@ -101,7 +101,7 @@ import AllServices from './components/AllServices';
            <Route path= "/customer/:id" component={viewCustomer}></Route>
            <Route path= "/report" component={generateReport}></Route>
            <Route path= "/customerDetails" component={customerDetails}></Route>
-           <Route path= "/login" component={login}></Route>
+           <Route path= "/" exact component={login}></Route>
            <Route path= "/createRequest" component={createRequest}></Route>
            <Route path= "/readRequest" component={readRequest}></Route>
         
@@ -122,7 +122,7 @@ import AllServices from './components/AllServices';
            <Route path="/finance/incomeexpenditure/create" exact component={CreateIncomeExpenditure}></Route>
 
            {/*feedback*/}
-           <Route path="/Home" exact component={Home}/>
+           <Route path="/FeedbackHome" exact component={FeedbackHome}/>
           <Route path="/addf" component={CreatePost}/>
           <Route path="/editf/:id" component={EditPost}/>
           <Route path="/post/:id" component={PostDetails}/>

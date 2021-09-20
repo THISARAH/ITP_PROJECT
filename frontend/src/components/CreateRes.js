@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import NavBar from './NavBar';
 
 export default class CreateRes extends Component {
 
@@ -63,6 +64,8 @@ export default class CreateRes extends Component {
 
     render() {
         return(
+            <div className = "container" >
+            <NavBar/>
             <div className="col-md-8 mt-4 mx-auto">
                 <h1 className="h3 mb-3 font-weight-normal">Make New Reservation</h1>
                 <form className="needs-validation" onSubmit={this.onSubmit} >
@@ -143,7 +146,7 @@ export default class CreateRes extends Component {
 
                 </form>
             </div>    
-
+            </div>
         
         );
     }

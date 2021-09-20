@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './form.css';
+import res1 from '../images/res1.png'
+import NavBar from './NavBar';
 export default class RestCreate
  extends Component {
   
@@ -87,19 +89,21 @@ handleInputChange =(e)=>{
        
             <html>
                  <body>
-        <section style={{backgroundImage:`url('https://pixabay.com/get/g28979704d3f3d931d422fb35071608ef3d25d360686a86fa5113201ccfb1ef4b5d1d9f4fb3b205c6161857eda25b49dc.jpg')`,
+                 <div className = "container" >
+                    <NavBar/> </div>
+        <section style={{backgroundImage:`url(${res1})`,
         backgroundSize:'cover',
         backgroundPosition:'auto',
      
         }}> 
             <div className="col-md-8 mt-4 mx-auto"style={{
-        backgroundImage:`url('https://pixabay.com/get/g28979704d3f3d931d422fb35071608ef3d25d360686a86fa5113201ccfb1ef4b5d1d9f4fb3b205c6161857eda25b49dc.jpg')`,
+        backgroundImage:`url(${res1})`,
         backgroundPosition:'auto',
         
         backgroundSize:'cover' 
       }}>
 
-            <h1 className="h3 mb-3 font-weight-normal">Enter details</h1>
+            <div className="h1"> <h1 className="h3 mb-3 font-weight-normal">Enter details</h1> </div>
             
             <form className="row" onSubmit={this.onSubmit}>
 
@@ -113,7 +117,7 @@ handleInputChange =(e)=>{
             onChange ={this.handleInputChange}/>
             </div>*/}
 
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>
             Select Menu</label>
             <select name="menue" value={this.state.menue} onChange={this.handleInputChange} className="form-select">
@@ -125,7 +129,7 @@ handleInputChange =(e)=>{
             </select>
             </div>
             
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}} >FULL NAME
 </label>
             
@@ -139,7 +143,7 @@ handleInputChange =(e)=>{
             
            
 
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>Address</label>
             <input type="text"
             className="form-control" placeholder="Enter your Address"
@@ -149,7 +153,7 @@ handleInputChange =(e)=>{
             onChange ={this.handleInputChange}required/>
             </div>
             
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>Mobile number</label>
             <input type="text"  
             className="form-control" placeholder="Mobile"
@@ -160,7 +164,7 @@ handleInputChange =(e)=>{
             </div>
 
 
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>Date</label>
             <input type="date"
             className="form-control" placeholder="date"
@@ -178,7 +182,7 @@ handleInputChange =(e)=>{
             onChange ={this.handleInputChange}/>
             </div>*/}
             
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>
             No of adult guests</label>
             <select name="aguest" value={this.state.aguest} onChange={this.handleInputChange} className="form-select">
@@ -201,7 +205,7 @@ handleInputChange =(e)=>{
             </div>
         */}
 
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>
             No of child guests</label>
 
@@ -216,7 +220,7 @@ handleInputChange =(e)=>{
             </div>
 
             
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '15px'}} >Special requests</label>
             
             <input type="text"
@@ -229,11 +233,11 @@ handleInputChange =(e)=>{
             </div >
            
             <div className="city" id="right">
-            <h1  className=".form-Payments">Payments</h1>
+            <div className="h1"><h1 >Payments</h1></div>
             <br></br>
-            <h1  className="form-group">Accepted Cards</h1>
+            <h1  className="form-group1">Accepted Cards</h1>
             <br></br>
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>Name on the card</label>
             <input type="text"
             className="form-control" placeholder="Name"
@@ -243,7 +247,7 @@ handleInputChange =(e)=>{
             onChange ={this.handleInputChange}required/>
             </div>
 
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>Card number</label>
             <input type="text"
             className="form-control" placeholder="eg: 1234 5678 7896 7458"
@@ -252,7 +256,7 @@ handleInputChange =(e)=>{
             onChange ={this.handleInputChange}required/>
             </div>
 
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>Expiry date</label>
             <input type="date"
             className="form-control" placeholder="expdate"
@@ -261,7 +265,7 @@ handleInputChange =(e)=>{
             onChange ={this.handleInputChange}required/>
             </div>
 
-            <div className="form-group" style={{marginBottom: '15px'}}>
+            <div className="form-group1" style={{marginBottom: '15px'}}>
             <label style={{marginBottom: '5px'}}>CVV</label>
             <input type="text"
             className="form-control" placeholder="3-digit number"

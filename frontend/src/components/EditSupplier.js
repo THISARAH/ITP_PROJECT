@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import NavBar from './NavBar';
 
 export default class EditSupplier extends Component {
 
@@ -87,6 +88,8 @@ export default class EditSupplier extends Component {
 	render() {
 		return (
 			<html>
+			<div className = "container" >
+            <NavBar/>
 			<div className="col-md-8 mt-4 mx-auto">
 				<h1 className="h3 mb-3 front-weight-normal">Edit Supplier</h1>
 				<form className="needs-validation" onSubmit={this.onSubmit}>
@@ -187,7 +190,7 @@ export default class EditSupplier extends Component {
 
 				</form>
 			</div>
-		  
+		  </div>
 			</html>
 		)
 	  }

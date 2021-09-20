@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class RestPostDetails extends Component {
     constructor(props){
@@ -28,6 +29,8 @@ export default class RestPostDetails extends Component {
 
         const{menue,name,address,mobile,date,aguest,cguest,notes,cardname,cno,expdate,cvv} = this.state.post;
         return (
+            <div className = "container" >
+            <NavBar/>
             <div style={{marginTop:'20px'}}>
                 <h4>Reservation Details</h4>
                 <hr/>
@@ -72,6 +75,7 @@ export default class RestPostDetails extends Component {
              
                      
                 </d1>
+            </div>
             </div>
         );
     }

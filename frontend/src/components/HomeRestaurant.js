@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class HomeRestaurant extends Component {
     constructor(props){
@@ -34,7 +35,7 @@ export default class HomeRestaurant extends Component {
       render() {
         return (
           <div className="container">
-    
+              <NavBar/>
           <p>Restaurant reservation details</p>
           <table className = "table" >
             <thead>
@@ -92,7 +93,7 @@ export default class HomeRestaurant extends Component {
                     </tbody> 
                     </table>
     
-                    <button className="brn btn-success"> <a href="/Restaurantadd" style={{textDecoration:'none',color:'white'}}> Create new post </a></button>
+                    <button className="brn btn-success"> <a href="/Restaurantadd" style={{textDecoration:'none',color:'white'}}> Create reservation </a></button>
           </div>
         );
       }

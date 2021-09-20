@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import NavBar from './NavBar';
 
 export default class CreateSupplier extends Component {
 
@@ -64,6 +65,8 @@ export default class CreateSupplier extends Component {
 	render() {
 	  return (
 		  <html>
+		<div className = "container" >
+            <NavBar/>
 		  <div className="col-md-8 mt-4 mx-auto">
 			  <h1 className="h3 mb-3 front-weight-normal">Create New Supplier</h1>
 			  <form className="needs-validation" onSubmit={this.onSubmit}>
@@ -164,6 +167,7 @@ export default class CreateSupplier extends Component {
 					<button type="button" className="btn btn-primary btn-sm"><a href="/supplierH" style={{textDecoration:'none',color:'white'}}>&nbsp;Back</a></button>
 				  
 			  </form>
+		  </div>
 		  </div>
 		
 		  </html>

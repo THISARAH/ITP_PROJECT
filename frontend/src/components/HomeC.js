@@ -4,19 +4,21 @@ import image1 from '../images/defaultBcg.jpeg'
 import image2 from '../images/details-3.jpeg'
 import image3 from '../images/room-1.jpeg'
 
+
 export default class HomeA extends Component {
     render() {
         return (
-            <div className="container-fluid" style={{backgroundImage: `url(${image1}`, backgroundSize: 'cover' }}>
+            <div className="container-fluid" style={{backgroundImage: `url(${image1})`, backgroundSize: 'cover' }}>
                 <br/>
                 <NavBarC/>
-                <div>
-                    <h1 style={{textAlign: 'center'}}>Welcome to Hotel Paradise</h1>
+
+                <br/> <br/><br/><br/><br/>
+                <div style={{fontSize: '50px', textAlign: 'center', color: 'black'}}>
+                    Welcome to Hotel Paradise
                 </div>
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                <br/><br/><br/><br/><br/><br/><br/>
-
+                <br/><br/><br/><br/>
 
             </div>
         )

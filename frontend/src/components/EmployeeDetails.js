@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class EmployeeDetails extends Component {
 
@@ -30,6 +31,9 @@ export default class EmployeeDetails extends Component {
 
         const {employeeId,name,designation,level,attendence}=this.state.employee;
         return (
+
+          <div className = "container" >
+          <NavBar/>
             <div style={{marginTop:'20px'}}>
             <h4>{employeeId}</h4>
             <hr/>
@@ -55,6 +59,7 @@ export default class EmployeeDetails extends Component {
             <h4> Click below to generate report</h4>
             <button className="btn btn-success"><a href="/reportsEmp " style={{textDecoration:'none',color:'white'}}>Generate-Details</a></button>
     
+          </div>
           </div>
         )
     }

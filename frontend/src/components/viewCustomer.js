@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class viewCustomer extends Component {
   constructor(props){
@@ -28,6 +29,8 @@ export default class viewCustomer extends Component {
 
     const {name,email,address,nic,contactNumber} = this.state.customer;
     return(
+      <div className = "container" >
+      <NavBar/>
       <div style={{marginTop:'20px'}}>
         <h4>{name}</h4>
         <hr/>
@@ -53,6 +56,7 @@ export default class viewCustomer extends Component {
         <h4> If you want to update your details, you need to request to the hotel</h4>
         <button className="btn btn-success"><a href="/createRequest" style={{textDecoration:'none',color:'white'}}>Create Request</a></button>
 
+      </div>
       </div>
     )
   }

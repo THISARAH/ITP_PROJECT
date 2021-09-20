@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class SupplierDetails extends Component {
 	constructor(props){
@@ -25,6 +26,8 @@ export default class SupplierDetails extends Component {
 		const {SupplierName,SupplierAddress,SupplierEmail,SupplierContactNumber,CompanyWebsiteName,TradingSince,TypeOfBusiness,PaymentMethod} = this.state.supplier;
 
 	  return (
+		<div className = "container" >
+		<NavBar/>
 	   <div style={{marginTop:'100px'}}>
 		   <h4>{SupplierName}</h4>
 		   <hr/>
@@ -52,6 +55,7 @@ export default class SupplierDetails extends Component {
 		   </dl>
 		   <button type="button" className="btn btn-primary"><a href="/supplierH" style={{textDecoration:'none',color:'white'}}>&nbsp;Back</a></button>
 	    </div>
+		</div>
 		
 	  )
 	  

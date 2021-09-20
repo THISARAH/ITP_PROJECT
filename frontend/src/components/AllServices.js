@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 //import services from '../../models/services';
 
 export default class AllServices extends Component{
@@ -71,6 +72,7 @@ componentDidMount(){
   render(){
     return(
       <div className="container">
+        <NavBar/>
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
         <h3>All packages</h3>

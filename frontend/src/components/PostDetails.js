@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import NavBar from './NavBar';
 
 export default class PostDetails extends Component {
     constructor(props){
@@ -24,8 +25,11 @@ export default class PostDetails extends Component {
     }
     render() {
         return (
+            <div className = "container" >
+            <NavBar/>
             <div>
                 post details
+            </div>
             </div>
         )
     }

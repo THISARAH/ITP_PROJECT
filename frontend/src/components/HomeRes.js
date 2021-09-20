@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 //import posts from '../../models/posts.js';
+import NavBar from './NavBar';
 
 export default class HomeRes extends Component {
   constructor(props) {
@@ -83,6 +84,7 @@ export default class HomeRes extends Component {
     return (
       
       <div className="container">
+        <NavBar/>
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
 
@@ -145,8 +147,8 @@ export default class HomeRes extends Component {
           </tbody>
         </table>   
 
-        <button className="btn btn-success"><a href="/addRes" style={{textDecoration:'none',color:'white'}}>Create new post</a></button>
-        &nbsp;
+        {/* <button className="btn btn-success"><a href="/addRes" style={{textDecoration:'none',color:'white'}}>Create new post</a></button>
+        &nbsp; */}
         <button className="btn btn-success"><a href="/vposts" style={{textDecoration:'none',color:'white'}}>View All Reservations</a></button>
 
 

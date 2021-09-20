@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class CreateService extends Component {
   
@@ -58,9 +59,13 @@ export default class CreateService extends Component {
   
   render() {
     return (
+      <html>
+        <body>
+      <div className = "container" >
+      <NavBar/>
       <div className="col-md-8 mt-4 mx-auto">
         <h1 className="h3 mb-3 font-weight-normal">Create a new service package</h1>
-          <form className="row g-3" onClick={this.onSubmit}>
+          <form className="row g-3" onSubmit={this.onSubmit}>
 
            <div class="col-md-3">
         <label for="validationCustom04" class="form-label">Type</label>
@@ -109,7 +114,7 @@ export default class CreateService extends Component {
           className="form-control" 
           name="price"
           placeholder="Enter price"
-          pattern="[0-999]{1000}"
+          pattern="\d{1,3}"
           value={this.state.price}
           onChange={this.handleInputChange} required/>
          
@@ -135,7 +140,9 @@ export default class CreateService extends Component {
           </form>
 
       </div>
-
+  </div>
+  </body>
+  </html>
     
 
 

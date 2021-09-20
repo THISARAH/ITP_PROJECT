@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import NavBar from './NavBar';
 
 export default class CreateEmployee extends Component {
      constructor(props){
@@ -107,6 +107,8 @@ export default class CreateEmployee extends Component {
         return(
           <html>
           <body>
+          <div className = "container" >
+            <NavBar/></div>
             <section style={{backgroundImage:`url('https://media.istockphoto.com/photos/light-green-defocused-blurred-motion-abstract-background-picture-id1138288758?k=20&m=1138288758&s=612x612&w=0&h=LMtberFagKLWqz4BdhZt4Ukh28m3TYJNZ-i5NegN1ro=')`,
             backgroundSize:'cover'}}>
           

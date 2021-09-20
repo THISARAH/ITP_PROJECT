@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class ResDetails extends Component {
     constructor(props) {
@@ -33,6 +34,8 @@ export default class ResDetails extends Component {
         const {Name,ID,Phone_No} = this.state.post;
 
         return (
+            <div className = "container" >
+            <NavBar/>
             <div style={{marginTop:'20px'}}>
             <h4>Customer ID: {ID}</h4>
             {/* <h4>{ID}</h4> */}
@@ -45,6 +48,7 @@ export default class ResDetails extends Component {
                 <dt className="col-sm-3">Customer's Phone number</dt>
                 <dd className="col-sm-9">{Phone_No}</dd>
             </dl>
+            </div>
             </div>
         )
     }

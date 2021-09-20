@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 
 export default class EmployeeReports extends Component{
@@ -31,6 +32,7 @@ export default class EmployeeReports extends Component{
       return(
         
         <div className="container">
+          <NavBar/>
             <h2>All Employee Details</h2>
             <table className="table table-hover" style={{marginTop:'40px'}}>
             <thead>

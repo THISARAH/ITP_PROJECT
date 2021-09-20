@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 //import posts from '../../models/posts.js';
+import NavBar from './NavBar';
 
 
 export default class ViewRes extends Component {
@@ -43,7 +44,7 @@ export default class ViewRes extends Component {
   render() {
     return (
       <div className="container">
-        
+        <NavBar/>
         <h4>All Reservations</h4>
         
         <table className="table table-hover" style={{marginTop:'40px'}}>  

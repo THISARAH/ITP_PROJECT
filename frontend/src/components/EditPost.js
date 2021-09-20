@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class EditPost extends Component {
 
@@ -116,6 +117,8 @@ export default class EditPost extends Component {
 
     render() {
         return (
+            <div className = "container" >
+            <NavBar/>
             <div>
                 <form class="needs-validation" novalidate>
                     <div class="form-row">
@@ -173,6 +176,7 @@ export default class EditPost extends Component {
                     </form>
 
 
+            </div>
             </div>
         )
     }

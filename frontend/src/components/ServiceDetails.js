@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class ServiceDetails extends Component {
   constructor(props){
@@ -31,6 +32,8 @@ export default class ServiceDetails extends Component {
   render() {
     const {type,name,price,discription}=this.state.service;
     return (
+      <div className = "container" >
+      <NavBar/>
     <div style={{marginTop:'20px'}}>
       <h4>{type}</h4>
 
@@ -49,6 +52,7 @@ export default class ServiceDetails extends Component {
 
   </dl>
 
+    </div>
     </div>
 
     )

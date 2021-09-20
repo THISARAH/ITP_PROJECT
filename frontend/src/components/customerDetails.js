@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 
 export default class generateReport extends Component{
@@ -58,6 +59,7 @@ export default class generateReport extends Component{
       return(
         
         <div className="container">
+          <NavBar/>
           <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h2>All Customer Details</h2>
