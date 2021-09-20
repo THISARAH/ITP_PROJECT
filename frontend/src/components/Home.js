@@ -155,7 +155,7 @@ handleSearchArea =(e) =>{
 
         </table>
 
-        <button className="btn btn-success"><a href="/addf" style={{textDecoration:'none',color:'white'}}>Create New Post</a></button>
+        {/* <button className="btn btn-success"><a href="/addf" style={{textDecoration:'none',color:'white'}}>New feedback</a></button> */}
       </div>
       
     )

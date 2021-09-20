@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import NavBar from './NavBar';
+import NavBarCus from './NavBarCus';
 
 export default class CreatePost extends Component {
 
@@ -58,7 +58,7 @@ export default class CreatePost extends Component {
     render(){
         return(
             <div className = "container" >
-            <NavBar/>
+            <NavBarCus/>
             <div>
                 <form class="needs-validation" novalidate>
                     <div class="form-row">

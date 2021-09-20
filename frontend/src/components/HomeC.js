@@ -14,7 +14,8 @@ export default class HomeA extends Component {
 
                 <br/> <br/><br/><br/><br/>
                 <div style={{fontSize: '50px', textAlign: 'center', color: 'black'}}>
-                    Welcome to Hotel Paradise
+                    {/* Welcome to Hotel Paradise<br/> */}
+                    WELCOME TO HOTEL PARADISE
                 </div>
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

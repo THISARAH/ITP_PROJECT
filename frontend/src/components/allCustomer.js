@@ -37,6 +37,7 @@ export default class allCustomer extends Component{
 
   filterData(customers,searchKey){
     const result = customers.filter((customer) =>
+    customer.name.includes(searchKey)||
     customer.name.toLowerCase().includes(searchKey)||
     customer.name.toUpperCase().includes(searchKey)||
     customer.email.toLowerCase().includes(searchKey)||
