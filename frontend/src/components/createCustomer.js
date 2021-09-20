@@ -154,9 +154,10 @@ export default class createCustomer extends Component{
             </table>
             </form>
 
-
+            <br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
         </section>
+        
         </body>
         </html>
       

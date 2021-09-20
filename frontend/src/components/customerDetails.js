@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
-import NavBar from './NavBar';
+import NavBarCus from './NavBarCus';
 
 
 export default class generateReport extends Component{
@@ -30,6 +30,7 @@ export default class generateReport extends Component{
   filterData(customers,searchKey){
     const result = customers.filter((customer) =>
     customer.name.toLowerCase().includes(searchKey)||
+    customer.name.includes(searchKey)||
     customer.name.toUpperCase().includes(searchKey)||
     customer.email.toLowerCase().includes(searchKey)||
     customer.address.toLowerCase().includes(searchKey)
@@ -59,7 +60,7 @@ export default class generateReport extends Component{
       return(
         
         <div className="container">
-          <NavBar/>
+          <NavBarCus/>
           <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h2>All Customer Details</h2>
