@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import NavBarC from './NavBarCus'
+// import NavBarC from './NavBarCus'
 import SlideShowCus from './slideShowCus'
 import 'react-slideshow-image/dist/styles.css'
 import image from '../images/backQ3.jpg'
+import './footer.css'
 
 
 
@@ -16,7 +17,7 @@ export default class HomeA extends Component {
                     <div>
                         <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{padding: '30px 30px 10px 20px'}}>
                             <div className="container-fluid">
-                                <a className="navbar-brand" href="/Home" style={{fontSize:'30px'}}>HOTEL PARADISE</a>
+                                <a className="navbar-brand" href="/" style={{fontSize:'30px'}}>HOTEL PARADISE</a>
                                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                                 </button>
@@ -111,7 +112,60 @@ export default class HomeA extends Component {
                     
                 </div>
                 <br/>
+                <footer class="footer-distributed">
 
+                <div class="footer-left">
+
+                    <h3>Hotel<span>Paradise</span></h3>
+
+                    <p class="footer-links">
+                        <a href="#" class="link-1">Home</a>
+                                              
+                        <a href="#">About us</a>
+                        
+                    </p>
+
+                    <p class="footer-company-name">Hotel Paradise © 2021</p>
+                </div>
+
+                <div class="footer-center">
+
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>444 S. Cedros Ave</span> Negombo, Sri Lanka</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>011 1498220</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="mailto:support@company.com">support@company.com</a></p>
+                    </div>
+
+                </div>
+
+                <div class="footer-right">
+
+                    {/* <p class="footer-company-about">
+                        <span>About the hotel</span>
+                        
+                    </p> */}
+
+                    <div class="footer-icons">
+
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+
+                    </div>
+
+                </div>
+
+                </footer>
 
             </div>
         )

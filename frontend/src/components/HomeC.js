@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import NavBarC from './NavBarCus'
+import Footer from './footer';
 import SlideShowCus from './slideShowCus'
 import 'react-slideshow-image/dist/styles.css'
 import image from '../images/backQ3.jpg'
@@ -56,7 +57,7 @@ export default class HomeA extends Component {
                     </div>
                     
                 </div>
-
+            <Footer/>
             </div>
             
         )

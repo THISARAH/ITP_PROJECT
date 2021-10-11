@@ -50,7 +50,8 @@ export default class NavBar extends Component {
                                     <li><a className="dropdown-item" href="/customerDetails">Profile</a></li>
                                     <li><hr className="dropdown-divider"/></li>
 
-                                    <li><a className="dropdown-item" href="/CustomerLogin">Sign out</a></li>
+                                    <li><a className="dropdown-item" href="/">Sign out</a></li>
+
                                 </ul>
                     </div>
                     

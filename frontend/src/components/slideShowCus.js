@@ -25,35 +25,35 @@ const slideShowCus = () => {
             <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
               
             </div>
-            <span>Beautiful Scenary</span>
+            <span>Heavenly and Peaceful Environment</span>
           </div>
 
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
               
             </div>
-            <span>Restaurant</span>
+            <span>Remarkable Dining & Hospitality Experiences</span>
           </div>
 
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
               
             </div>
-            <span>Luxury Rooms</span>
+            <span>Elegantly Furnished Luxury Rooms</span>
           </div>
 
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[3]})`}}>
              
             </div>
-            <span>Pool</span>
+            <span>Outdoor Swimming Pool, The Calm Resort & Spa</span>
           </div>
           
           <div className="each-slide">
             <div style={{'backgroundImage': `url(${slideImages[4]})`}}>
               
             </div>
-            <span>Bar</span>
+            <span>Spacious Lounge Bar</span>
           </div>
         </Slide>
       </div>
