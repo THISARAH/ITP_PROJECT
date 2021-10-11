@@ -1,6 +1,9 @@
+//in here we implement CRUD operations     
+
 const express = require('express');
 const PostsRes = require('../models/postsRes');         //Posts = PostsRes
 
+//to use HTTP requests we use express.Router function             
 const router = express.Router();
 
 //Save Reservations
@@ -88,5 +91,5 @@ router.get("/Res/:id",(req,res) =>{
 
 
 
-
+//after created all the modules we have to export our module     
 module.exports = router;

@@ -9,15 +9,19 @@ export default class HomeRes extends Component {
     
 
     this.state={
-      arrayRes:[]   //this array is used to save posts when we use GET request      
+      arrayRes:[]   //this array is used to save posts    
     };
 
   }
 
+
+  ////allows us to execute the React code when the component is already placed
   componentDidMount() {
     this.retrievePosts();
   }
 
+
+  //this is used to get all the data inside the database
   retrievePosts() {
     axios.get("/Res").then(res =>{
       if(res.data.success){
@@ -30,14 +34,18 @@ export default class HomeRes extends Component {
     });
   }
 
+
+  //implement delete method
   onDelete =(id) =>{
 
     axios.delete(`/Res/delete/${id}`).then((res) =>{
       alert("Delete Successfully");
-      this.retrievePosts();
+      this.retrievePosts();                    //this method will retrieve current data after deleting the relevent reservation
     });
   }
 
+
+  //this method will filter data to lowercase or uppercase
   filterData(arrayRes,searchKey){                      
 
     const result = arrayRes.filter((post) =>            
@@ -62,11 +70,14 @@ export default class HomeRes extends Component {
     
     )
 
-    this.setState({arrayRes:result})                   
+    this.setState({arrayRes:result})          //after filter data, display it.    
   }
 
 
 
+  //implement handleSearchArea function 
+  //in here we use two parameters,
+  //existingRes, searchKey using these two we find the particular data in the database
   handleSearchArea = (e) =>{
 
     const searchKey= e.currentTarget.value;
@@ -86,15 +97,22 @@ export default class HomeRes extends Component {
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
 
+            {/* Topic */}
+
             <h4>All Reservations</h4>
           </div>
+
+          {/* Search Bar component */}
+
+          {/* onChange method, when we give specific data it will automaticaly update it's state */}
+
           <div className="col-lg-3 mt-2 mb-2">
             <input 
             className="form-control"
             type="search"
             placeholder="Search"
             name="searchQuery"
-            onChange={this.handleSearchArea}>
+            onChange={this.handleSearchArea}>   
               </input>
           </div>
         </div>
@@ -112,11 +130,14 @@ export default class HomeRes extends Component {
             </tr>
           </thead>
 
-          <tbody>
-            {this.state.arrayRes.map((arrayRes,index) =>(               
-              <tr key={index}> 
+          <tbody>                                            
+                     
+            {this.state.arrayRes.map((arrayRes,index) =>(    //we use map function for rendering a list of data which are saved inside the post method
+              <tr key={index}>                                        
                 <th scope="row">{index+1}</th>
                 <td>
+                  
+                {/* this will display relevent details for the name */}
                     <a href={`/Reserpost/${arrayRes._id}`} style={{textDecoration:'none'}}>       
                     {arrayRes.Name}                                                            
                     </a>
@@ -129,11 +150,13 @@ export default class HomeRes extends Component {
                 <td>{arrayRes.No_Of_Rooms}</td>
 
                 <td>
-                  <a className="btn btn-warning" href={`/editRes/${arrayRes._id}`}>   
+                  <a className="btn btn-outline-success" href={`/editRes/${arrayRes._id}`}>   
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </a>
-                  &nbsp;
-                  <a className="btn btn-danger" href="#" onClick={() =>this.onDelete(arrayRes._id)}>         
+                  &nbsp;   {/*used to create a space without going to new line*/}
+
+                  {/* in delete method we use array name as arrayRes, so to delete a reservation we have to pass id as well */}
+                  <a className="btn btn-outline-danger" href="#" onClick={() =>this.onDelete(arrayRes._id)}>         
                     <i className="far fa-trash-alt"></i>&nbsp;Delete
                   </a>
                 </td>
@@ -148,6 +171,14 @@ export default class HomeRes extends Component {
         <button className="btn btn-success"><a href="/addRes" style={{textDecoration:'none',color:'white'}}>Create new post</a></button>
         &nbsp;
         <button className="btn btn-success"><a href="/vposts" style={{textDecoration:'none',color:'white'}}>View All Reservations</a></button>
+
+
+        <br>
+        </br>
+        <br>
+        </br><br>
+        </br><br>
+        </br>
 
 
 
