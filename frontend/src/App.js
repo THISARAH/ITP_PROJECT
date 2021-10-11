@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
 import HomeA from './components/HomeA';
 import HomeC from './components/HomeC';
+import HomeCusBefore from './components/HomeCustBefore';
 // import NavBar from './components/NavBar';
 import NavBar from './components/NavBar';
 import CreateSupplier from './components/CreateSupplier';
@@ -67,7 +68,7 @@ import ServiceDetails from './components/ServiceDetails';
 import AllServices from './components/AllServices';
 
 
- 
+import jumbotron from './App.css';
 
  export default class App extends Component{
   render() {
@@ -75,11 +76,17 @@ import AllServices from './components/AllServices';
       
      
          <BrowserRouter>
-           <div className="container">
+         <div className="jumbotron">
+           
+           
  
            {/* <NavBar/> */}
 
            <Route path="/AdminHome" exact component={HomeA}></Route>
+           {/* Customer Home */}
+           <Route path="/Home" exact component={HomeC}></Route>
+           <Route path="/" exact component={HomeCusBefore}></Route>
+
         {/* Supplier */}
         <Route path="/supplierH" exact component={SupplierHome}></Route>
         <Route path="/addsup" exact component={CreateSupplier}></Route>
@@ -101,7 +108,7 @@ import AllServices from './components/AllServices';
            <Route path= "/customer/:id" component={viewCustomer}></Route>
            <Route path= "/report" component={generateReport}></Route>
            <Route path= "/customerDetails" component={customerDetails}></Route>
-           <Route path= "/" exact component={login}></Route>
+           <Route path= "/CustomerLogin" exact component={login}></Route>
            <Route path= "/createRequest" component={createRequest}></Route>
            <Route path= "/readRequest" component={readRequest}></Route>
         
@@ -128,14 +135,13 @@ import AllServices from './components/AllServices';
           <Route path="/post/:id" component={PostDetails}/>
 
 
-{/*Restaurant*/}
-<Route path="/HomeRestaurant" exact component={HomeRestaurant}></Route>
+        {/*Restaurant*/}
+        <Route path="/HomeRestaurant" exact component={HomeRestaurant}></Route>
         <Route path="/Restaurantadd" exact component={RestCreatePost}></Route>
         <Route path="/Restaurantedit/:id" exact component={RestEditPost}></Route>
         <Route path="/Restaurantpost/:id" exact component={RestPostDetails}></Route>
 
-            {/* Customer Home */}
-           <Route path="/Home" exact component={HomeC}></Route>
+            
 
 
            {/* Services */}
@@ -145,8 +151,6 @@ import AllServices from './components/AllServices';
            <Route path="/service/:id" component={ServiceDetails}></Route>
 
 
-
- 
 
            </div>
          </BrowserRouter>

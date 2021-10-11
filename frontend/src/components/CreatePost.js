@@ -60,6 +60,7 @@ export default class CreatePost extends Component {
             <div className = "container" >
             <NavBarCus/>
             <div>
+                <br/><br/>
                 <form class="needs-validation" novalidate>
                     <div class="form-row">
                         <div class="col-md-4 mb-3">

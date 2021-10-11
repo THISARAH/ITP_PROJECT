@@ -180,7 +180,7 @@ export default class CreateIncomeExpenditure extends Component {
                         type="date"
                         className="form-control"
                         name="transaction_date"
-                        value={new Date(this.state.transaction_date).toLocaleDateString}
+                        value={this.state.transaction_date}
                         onChange={this.handleInputChange} />
 
                         <div style={{color: 'red', fontSize: 12}}>
