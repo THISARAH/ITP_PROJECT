@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import NavBar from '../NavBar';
 const axios = require('axios').default;
 // import axios from 'axios';
+
 
 /**
 * @author
@@ -69,7 +71,7 @@ handleSearchArea = (e) => {
  render() {
   return(
     <div className = "container" >
-        
+        <NavBar/>
         <br/>
         <div className="row">
             <div className="col-lg-9 mt-2 mb-2">

@@ -1,6 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
-
+import NavBar from './NavBar';
 
 export default class readRequest extends Component{
   constructor(props){
@@ -38,6 +38,7 @@ export default class readRequest extends Component{
       return(
         
         <div className="container">
+          <NavBar/>
             <h2>Profile Updating Requests</h2>
             <table className="table table-hover" style={{marginTop:'40px'}}>
             <thead>

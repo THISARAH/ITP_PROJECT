@@ -61,7 +61,11 @@ export default class RestPostDetails extends Component {
                     <dt className="col-sm-3">SPECIAL REQUESTS</dt>
                     <dd className="col-sm-3">{notes}</dd>
 
+
                     {/* <dt className="col-sm-3">NAME ON CARD</dt>
+
+                    <dt className="col-sm-3">NAME ON CARD</dt>
+
                     <dd className="col-sm-3">{cardname}</dd>
 
                     <dt className="col-sm-3">CARD NUMBER</dt>
@@ -71,7 +75,11 @@ export default class RestPostDetails extends Component {
                     <dd className="col-sm-3">{expdate}</dd>
 
                     <dt className="col-sm-3">CVV</dt>
+
                     <dd className="col-sm-3">{cvv}</dd> */}
+
+
+
              
                      
                 </d1>

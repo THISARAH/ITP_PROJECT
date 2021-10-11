@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import NavBar from '../NavBar';
 
 /**
 * @author
@@ -125,6 +126,8 @@ export default class CreateIncomeExpenditure extends Component {
     
     render() {
     return(
+        <div className = "container" >
+        <NavBar/>
         <div className="col-md-8 mt-4 mx-auto"> 
             <br/>
             <h3 className="h3 mb-3 font-weight-normal">Create new Record</h3> 
@@ -177,7 +180,7 @@ export default class CreateIncomeExpenditure extends Component {
                         type="date"
                         className="form-control"
                         name="transaction_date"
-                        value={new Date(this.state.transaction_date).toLocaleDateString}
+                        value={this.state.transaction_date}
                         onChange={this.handleInputChange} />
 
                         <div style={{color: 'red', fontSize: 12}}>
@@ -214,6 +217,7 @@ export default class CreateIncomeExpenditure extends Component {
                     <a href="/finance/incomeexpenditure" class="btn btn-outline-success" style={{marginTop: '15px'}} tabindex="-1" role="button" aria-disabled="true">Back to List</a>
                     
                 </form>
+        </div>
         </div>
     )
     }

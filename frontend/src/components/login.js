@@ -85,9 +85,9 @@ export default class createCustomer extends Component{
             <button className="btn btn-success" style={{margin:"25px 85px 75px 120px"}}><a href="/register" style={{textDecoration:'none',color:'white'}}>Create New Account</a></button>
              &nbsp;
             &nbsp;
-            <button className="btn btn-success"  style={{margin:"25px 85px 75px 40px"}}><a href="#" style={{textDecoration:'none',color:'white'}}>Log in</a></button>
+            <button className="btn btn-success"  style={{margin:"25px 85px 75px 40px"}}><a href="/Home" style={{textDecoration:'none',color:'white'}}>Log in</a></button>
 
-
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         </div>
         </section>
         </body>

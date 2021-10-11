@@ -1,12 +1,9 @@
 import React from "react";
 import ReactToPrint from "react-to-print";
 import axios from 'axios';
-<<<<<<< Updated upstream
-//import posts from '../../models/posts.js';
-=======
+
 import NavBar from './NavBar';
-//import './form.css';
->>>>>>> Stashed changes
+
 
 const thStyle = {
   fontFamily: "Anton",
@@ -28,6 +25,9 @@ const thStyle = {
 // };
 
 class ComponentToPrint extends React.Component {
+
+
+
 
   constructor(props) {
     super(props);
@@ -73,12 +73,12 @@ class ComponentToPrint extends React.Component {
   render() {
     return (
       <div className="container">
-<<<<<<< Updated upstream
-        
+
+        <NavBar/>
+
         <h4>All Reservations</h4>
-=======
-      <NavBar/>
-      <h4>All Reservations</h4>
+
+
       
       <table className="table table-hover" style={{marginTop:'40px'}}>  
         <thead>
@@ -93,7 +93,6 @@ class ComponentToPrint extends React.Component {
           </tr>
         </thead>
 
->>>>>>> Stashed changes
         
 
         <tbody>

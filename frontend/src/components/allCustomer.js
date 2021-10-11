@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import axios from 'axios';
+import NavBar from './NavBar';
 
 export default class allCustomer extends Component{
   constructor(props){
@@ -36,6 +37,7 @@ export default class allCustomer extends Component{
 
   filterData(customers,searchKey){
     const result = customers.filter((customer) =>
+    customer.name.includes(searchKey)||
     customer.name.toLowerCase().includes(searchKey)||
     customer.name.toUpperCase().includes(searchKey)||
     customer.email.toLowerCase().includes(searchKey)||
@@ -64,6 +66,7 @@ export default class allCustomer extends Component{
   render(){
     return(
       <div className="container">
+        <NavBar/>
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h2>All Customer Details</h2>
@@ -118,12 +121,12 @@ export default class allCustomer extends Component{
                </tbody>
              </table>
 
-             <button className="btn btn-success"><a href="/register" style={{textDecoration:'none',color:'white'}}>Create New Account</a></button>
-             &nbsp;
+             {/* <button className="btn btn-success"><a href="/register" style={{textDecoration:'none',color:'white'}}>Create New Account</a></button>
+             &nbsp; */}
              <button className="btn btn-success"><a href="/report" style={{textDecoration:'none',color:'white'}}>generate Report</a></button>
              &nbsp;
-             <button className="btn btn-success"><a href="/customerDetails" style={{textDecoration:'none',color:'white'}}>Profile Hanling</a></button>
-             &nbsp;
+             {/* <button className="btn btn-success"><a href="/customerDetails" style={{textDecoration:'none',color:'white'}}>Profile Handling</a></button>
+             &nbsp; */}
              <button className="btn btn-success"><a href="/readRequest" style={{textDecoration:'none',color:'white'}}>Check New Requests</a></button>
              </div>
          )}
