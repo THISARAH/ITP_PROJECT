@@ -7,9 +7,11 @@ export default class ResDetails extends Component {
         super(props);
 
         this.state={
-            post:{}                   // post = queRes
+            post:{}                   //we use post array to save our posts
         };
     }
+
+    //used to get specific post details throw the get request
 
     componentDidMount(){
         const id = this.props.match.params.id;
@@ -31,6 +33,7 @@ export default class ResDetails extends Component {
 
     render() {
 
+        //set the data to GUI components
         const {Name,ID,Phone_No} = this.state.post;
 
         return (

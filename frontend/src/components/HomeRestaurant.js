@@ -49,11 +49,19 @@ export default class HomeRestaurant extends Component {
                 <th scope="col">NO. OF GUESTS</th>
                 <th scope="col">NO. OF CHILDREN</th>
                 <th scope="col">SPECIAL REQUESTS</th>
+
+                {/* <th scope="col">NAME ON CARD</th>
+                <th scope="col">CARD NUMBER</th>
+                <th scope="col">EXP DAY</th>
+                <th scope="col">CVV</th>
+                <th scope="col">Action</th> */}
+
                 <th scope="col">NAME ON CARD</th>
                 <th scope="col">CARD NUMBER</th>
                 <th scope="col">EXP DAY</th>
                 <th scope="col">CVV</th>
                 <th scope="col">Action</th>
+
               </tr>
             </thead>
                     <tbody>

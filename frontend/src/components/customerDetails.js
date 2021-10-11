@@ -8,13 +8,17 @@ export default class generateReport extends Component{
     super(props);
 
     this.state={
-      customers:[]
+      customers:[]               
     };
   }
 
+    
   componentDidMount(){
     this.retrieveCustomers();
   }
+
+
+  
 
   retrieveCustomers(){
     axios.get("http://localhost:8000/customers").then(res =>{

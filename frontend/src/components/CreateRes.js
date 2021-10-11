@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+
+import axios from 'axios'                            //we used for call API and save our data in to the database
+import NavBar from './NavBarCus.js';
+
 import NavBar from './NavBar';
+
 
 export default class CreateRes extends Component {
 
@@ -26,7 +30,8 @@ export default class CreateRes extends Component {
         })
     }
 
-    onSubmit = (e) =>{
+    //implement onSubmit method 
+    onSubmit = (e) =>{  
         e.preventDefault();
 
         const {Name,ID,Phone_No,Check_In,Check_Out,No_Of_Rooms} = this.state;
@@ -40,8 +45,8 @@ export default class CreateRes extends Component {
             No_Of_Rooms:No_Of_Rooms
         }
 
-        console.log(data)
-
+        console.log(data)                              // converts HTML tags into the JavaScript function and also it sends our 			
+                                                        //data to console log in our web browser
         axios.post("/Res/save",data).then((res) =>{
             if(res.data.success){
                 alert("Reserved successfully");
@@ -79,6 +84,8 @@ export default class CreateRes extends Component {
                         value={this.state.Name}
                         onChange={this.handleInputChange}
                         required/>
+                        <label style={{color:'#ff7b25',marginBottom:'5px'}}>ex:Thisara</label>
+
                     </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
@@ -86,10 +93,12 @@ export default class CreateRes extends Component {
                         <input type="text"
                         className="form-control"
                         name="ID"
+                        pattern="[0-9]{9}[vVxX]"
                         placeholder="Enter ID"
                         value={this.state.ID}
                         onChange={this.handleInputChange}
                         required/>
+                        <label style={{color:'#ff7b25',marginBottom:'5px'}}>ex:973454389V</label>
                     </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
@@ -102,31 +111,40 @@ export default class CreateRes extends Component {
                         value={this.state.Phone_No}
                         onChange={this.handleInputChange}
                         required/>
+                        <label style={{color:'#ff7b25',marginBottom:'5px'}}>ex:0779625853</label>
                     </div> 
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                         <label style ={{marginBottom:'5px'}}>Check In</label>
                         <input type="date"
+                        min="2021-10-12"
+                        class="datepicker"
+                        data-date-format="mm/dd/yyyy"
                         className="form-control"
                         name="Check_In"
                         placeholder="Enter Check In"
                         value={this.state.Check_In}
                         onChange={this.handleInputChange}
                         required/>
+                        
                     </div> 
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                         <label style ={{marginBottom:'5px'}}>Check Out</label>
                         <input type="date"
+                        min="2021-10-12"
+                        class="datepicker"
+                        data-date-format="mm/dd/yyyy"
                         className="form-control"
                         name="Check_Out"
                         placeholder="Enter Check Out"
                         value={this.state.Check_Out}
                         onChange={this.handleInputChange}
                         required/>
+                        
                     </div> 
 
-                    <div className="form-group" style={{marginBottom:'15px'}}>
+                    <div className="form-group" required style={{marginBottom:'15px'}}>
                         <label style ={{marginBottom:'5px'}}>Number Of Rooms</label>
                         <select name="No_Of_Rooms" value={this.state.No_Of_Rooms} onChange={this.handleInputChange} className="form-control" >
                         <option value="">Select No Of Rooms..</option>
@@ -136,6 +154,7 @@ export default class CreateRes extends Component {
                                 <option value="4 Rooms">4</option>      
                         
                         </select>
+                        
                     </div> 
 
                     <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} >

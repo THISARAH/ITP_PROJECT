@@ -26,6 +26,9 @@ const postSchemaRes = new mongoose.Schema({
         required: true
     }
 
+
 });
 
+//DB name is Room_Reservations
+//created module export to the DB
 module.exports = mongoose.model('Room_Reservations',postSchemaRes);
