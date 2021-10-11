@@ -49,12 +49,6 @@ export default class EditIncomeExpenditure extends Component {
             typeError = "Type is required"
         }
 
-        if(!this.state.transaction_date){
-            transaction_dateError = "Date is required"
-        }
-        else if(varDate > today){
-            transaction_dateError = "Valid date is required"
-        }
 
         if(!this.state.amount){
             amountError = "Amount is required"
@@ -193,7 +187,7 @@ export default class EditIncomeExpenditure extends Component {
                         onChange={this.handleInputChange} />
                     </div>
 
-                    <div className="form-group" style={{marginBottom: '15px'}}>
+                    {/* <div className="form-group" style={{marginBottom: '15px'}}>
                         <label style={{marginBottom: '5px'}}>Date</label>
                         <input 
                         type="text"
@@ -202,10 +196,7 @@ export default class EditIncomeExpenditure extends Component {
                         value={this.state.transaction_date}
                         onChange={this.handleInputChange} />
 
-                        <div style={{color: 'red', fontSize: 12}}>
-                                {this.state.transaction_dateError}
-                        </div>
-                    </div>
+                    </div> */}
 
                     {/* ------------------------------------------------------------------------ */}
 
