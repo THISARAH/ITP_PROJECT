@@ -1,5 +1,7 @@
- 
- 
+
+//in here we implement our routing side 
+
+
 
 import React, { Component } from 'react'
 import {BrowserRouter,Route} from 'react-router-dom';
@@ -28,6 +30,8 @@ import EditRes from './components/EditRes';
 import ResDetails from './components/ResDetails';
 import ViewRes from './components/ViewRes';
 import HomeRes from './components/HomeRes';
+import Cards from './components/ThisaraClient/Cards.jsx';
+
 
 //customer
 import allCustomer from './components/allCustomer';
@@ -100,6 +104,9 @@ import jumbotron from './App.css';
           <Route path="/Reserpost/:id" exact component={ResDetails}></Route>        
           <Route path="/vposts" exact component={ViewRes}></Route>
           <Route path="/hres" exact component={HomeRes}></Route>
+          <Route path="/reservationClient" exact component={Cards}></Route>
+
+          
           
            {/*Customer*/}
            <Route path= "/allCustomer" exact component={allCustomer}></Route>

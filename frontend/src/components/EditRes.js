@@ -16,6 +16,8 @@ export default class EditRes extends Component {
         }
     }
 
+    ////identify changes and update the state
+
     handleInputChange = (e) =>{
         const {name,value} = e.target;
 
@@ -25,10 +27,12 @@ export default class EditRes extends Component {
         })
     }
 
+    //implement onSubmit method
+
     onSubmit = (e) =>{
         
         e.preventDefault();
-        const id = this.props.match.params.id;
+        const id = this.props.match.params.id;               // we use id here because we are going to update specific post details
 
         const {Name,ID,Phone_No,Check_In,Check_Out,No_Of_Rooms} = this.state;
 
@@ -43,11 +47,13 @@ export default class EditRes extends Component {
         }
 
         console.log(data)
+        
+        //using axios we send our data in to database as put request
 
         axios.put(`/Res/update/${id}`,data).then((res) =>{
 
             if(res.data.success){
-                alert("Post updated successfully");
+                alert("Reservation updated successfully");
                 this.setState(
                     {
                         Name:"",
@@ -63,6 +69,7 @@ export default class EditRes extends Component {
     }
 
 
+    //used to get specific post details throw the get request
 
     componentDidMount(){
         const id = this.props.match.params.id;
@@ -103,6 +110,7 @@ export default class EditRes extends Component {
                         value={this.state.Name}
                         onChange={this.handleInputChange}
                         required/>
+                        <label style={{color:'#ff7b25',marginBottom:'5px'}}>ex:Thisara</label>
                     </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
@@ -111,9 +119,11 @@ export default class EditRes extends Component {
                         className="form-control"
                         name="ID"
                         placeholder="Enter ID"
+                        pattern="[0-9]{9}[vVxX]"
                         value={this.state.ID}
                         onChange={this.handleInputChange}
                         required/>
+                        <label style={{color:'#ff7b25',marginBottom:'5px'}}>ex:973454389V</label>
                     </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
@@ -126,11 +136,15 @@ export default class EditRes extends Component {
                         value={this.state.Phone_No}
                         onChange={this.handleInputChange}
                         required/>
+                        <label style={{color:'#ff7b25',marginBottom:'5px'}}>ex:0779625853</label>
                     </div> 
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                         <label style ={{marginBottom:'5px'}}>Check_In</label>
                         <input type="date"
+                        min="2021-10-12"
+                        class="datepicker"
+                        data-date-format="mm/dd/yyyy"
                         className="form-control"
                         name="Check_In"
                         placeholder="Enter Check In"
@@ -142,6 +156,9 @@ export default class EditRes extends Component {
                     <div className="form-group" style={{marginBottom:'15px'}}>
                         <label style ={{marginBottom:'5px'}}>Check_Out</label>
                         <input type="date"
+                        min="2021-10-12"
+                        class="datepicker"
+                        data-date-format="mm/dd/yyyy"
                         className="form-control"
                         name="Check_Out"
                         placeholder="Enter Check Out"

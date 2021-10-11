@@ -1,16 +1,18 @@
 const express = require('express'); 
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');   //this will convert json format to java script object
-const cors = require('cors');
+const cors = require('cors');                //to avoid the cors error, it is occur when we use two port numbers to backend and frontend
 
+//import express because we are going to build express application 
 const app = express();
 
-//import routesc
+
 
 //const postRoutes = require('./routes/posts');
 const employeeRoutes = require('./routes/employee');
 
 const RestaurantRoutes = require('./routes/sampleRestaurant');
+
 
 const ResRoutes = require('./routes/postsRes');
 
@@ -56,7 +58,6 @@ app.use(serviceRoutes);
 
 
  
-
 
 const PORT = 8000;
 //const DB_URL = 'mongodb+srv://twg:twg123@cluster0.g6c3p.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
