@@ -69,10 +69,9 @@ export default class createCustomer extends Component{
     return(
       <html>
       <body>
-        <section style={{backgroundImage:`url('https://media.istockphoto.com/photos/light-green-defocused-blurred-motion-abstract-background-picture-id1138288758?k=20&m=1138288758&s=612x612&w=0&h=LMtberFagKLWqz4BdhZt4Ukh28m3TYJNZ-i5NegN1ro=')`,
-        backgroundSize:'cover',}}>    
+        <section style={{backgroundImage:`url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80')`,
+        backgroundSize:'cover', height: '1000px'}}>    
       <div className="col-md-8 mt-4 mx-auto" style={{
-        backgroundImage:`url('https://www.coreldraw.com/static/cdgs/images/pages/seo/tips/photo/basics/blur-background/blur-background.jpg')`,
         backgroundPosition:'center',
         backgroundSize:'cover'
       }}> 

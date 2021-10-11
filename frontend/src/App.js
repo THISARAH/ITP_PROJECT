@@ -68,8 +68,6 @@ import ServiceDetails from './components/ServiceDetails';
 import AllServices from './components/AllServices';
 
 
-import jumbotron from './App.css';
-
  export default class App extends Component{
   render() {
     return (

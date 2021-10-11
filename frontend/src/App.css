@@ -38,24 +38,3 @@
   }
 }
 
-.jumbotron {
-  /* background-image: url(./images/backg1.jpg); */
-  background-color: #ffffff;
-  background-size: cover;
-}
-
-.jumbotronAhome {
-  padding: 1rem;
-  background-image: url(./images/backg1.jpg);
-  background-color: #ffffff;
-  background-size: cover;
-  height: 1000px;
-}
-
-.jumbotronCus {
-  padding: 1rem;
-  background-image: url(./images/defaultBcg.jpeg);
-  background-color: #ffffff;
-  background-size: cover; 
-  height: 1000px;
-}
