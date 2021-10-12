@@ -8,8 +8,6 @@ import {BrowserRouter,Route} from 'react-router-dom';
 import HomeA from './components/HomeA';
 import HomeC from './components/HomeC';
 import HomeCusBefore from './components/HomeCustBefore';
-// import NavBar from './components/NavBar';
-import NavBar from './components/NavBar';
 import CreateSupplier from './components/CreateSupplier';
 import EditSupplier from './components/EditSupplier';
 import SupplierHome from './components/SupplierHome';

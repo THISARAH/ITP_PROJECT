@@ -112,8 +112,8 @@ export default class CreateBasicSalary extends Component {
     
     render() {
     return(
-        <div className = "container" >
-            <NavBar/>
+        <div className = "jumbotron" style={{paddingLeft:'50px', paddingRight:'50px', paddingTop: '10px'}}>
+        <NavBar/>
         <div className="col-md-8 mt-4 mx-auto"> 
             <br/>
             <h3 className="h3 mb-3 font-weight-normal">Create Basic Salaries</h3> 

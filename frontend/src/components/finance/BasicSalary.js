@@ -1,4 +1,3 @@
-import Image from "./img/finance2.jpg";
 import NavBar from '../NavBar';
 import React, { Component } from 'react';
 const axios = require('axios').default;
@@ -74,7 +73,7 @@ handleSearchArea = (e) => {
  render() {
   return(
     // <div style={{ backgroundImage: 'url(' + Image + ')', resize:'cover', backgroundSize: 'cover' , margin: '15px'}}>
-    <div className = "container" >
+    <div className = "jumbotron" style={{paddingLeft:'50px', paddingRight:'50px', paddingTop: '10px'}}>
         <NavBar/>
        <br/>
         <div className="row">
