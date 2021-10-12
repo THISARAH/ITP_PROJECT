@@ -70,7 +70,7 @@ handleSearchArea = (e) => {
 
  render() {
   return(
-    <div className = "container" >
+    <div className = "jumbotron" style={{paddingLeft:'50px', paddingRight:'50px', paddingTop: '10px'}}>
         <NavBar/>
         <br/>
         <div className="row">

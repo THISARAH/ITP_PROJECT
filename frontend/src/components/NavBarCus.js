@@ -20,7 +20,7 @@ export default class NavBar extends Component {
                         </li>
                         &nbsp;
                         <li className="nav-item">
-                        <a className="nav-link" aria-current="page" href="#">Reservation </a>
+                        <a className="nav-link" aria-current="page" href="/reservationClient">Reservation </a>
                         </li>
                         &nbsp;
                         <li className="nav-item">

@@ -125,7 +125,7 @@ export default class EditBasicSalary extends Component {
     
     render() {
         return(
-            <div className = "container" >
+            <div className = "jumbotron" style={{paddingLeft:'50px', paddingRight:'50px', paddingTop: '10px'}}>
             <NavBar/>
             <div className="col-md-8 mt-4 mx-auto"> 
                 <br/>
